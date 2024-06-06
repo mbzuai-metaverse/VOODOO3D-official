@@ -23,6 +23,8 @@ conda create -n voodoo3d python=3.10  # optional
 pip install -r requirements.txt
 ```
 
+You need to download the BFM model for the pose estimation. You can download it [here](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/the_tran_mbzuai_ac_ae/EasQUk8MESRMtIphdDA7T14BDzj83frLGU3VQoWM6CG6iQ?e=C4vZ0k) and put it into `./additional_modules/deep3dfacerecon`.
+
 Next, prepare the pretrained weights and put them into `./pretrained_models`. You can download them [here](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/the_tran_mbzuai_ac_ae/EUWFHRIXZrxEo2Ak2zKhxfwBzmaLFjnBLmmi-5BoTuPU4w?e=m70Ly5).
 
 ## Inference
