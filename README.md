@@ -3,7 +3,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2312.04651-red?logo=arxiv&logoColor=red)](https://arxiv.org/abs/2312.04651)
 [![youtube](https://img.shields.io/badge/video-Youtube-white?logo=youtube&logoColor=red)](https://arxiv.org/abs/2312.04651)
 [![homepage](https://img.shields.io/badge/project-Homepage-orange?logo=Homepage&logoColor=orange)](https://arxiv.org/abs/2312.04651)
-[![LICENSE](https://img.shields.io/badge/license-MIT%202.0-blue?logo=C&logoColor=blue)](https://github.com/MBZUAI-Metaverse/VOODOO3D-official/LICENSE)
+[![LICENSE](https://img.shields.io/badge/license-MIT-blue?logo=C&logoColor=blue)](https://github.com/MBZUAI-Metaverse/VOODOO3D-official/LICENSE)
 
 ![teaser](./resources/github_readme/teaser.gif)
 
