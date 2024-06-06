@@ -65,7 +65,7 @@ python test_lp3d.py --source_root resources/images/sources \
 
 ## License
 
-This project is licensed under the Apache License Version 2.0. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 This work would not be possible without the following projects:
@@ -78,6 +78,17 @@ This work would not be possible without the following projects:
 - [GFPGAN](https://github.com/TencentARC/GFPGAN): We use GFPGAN as our super-resolution module
 
 If you see your code used in this implementation but haven't properly acknowledged, please contact me via [tranthephong33@gmail.com](tranthephong33@gmail.com).
+
+## BibTeX
+If our code is useful for your research or application, please cite our paper:
+```
+@inproceedings{tran2023voodoo,
+	title = {VOODOO 3D: Volumetric Portrait Disentanglement for One-Shot 3D Head Reenactment},
+	author = {Tran, Phong and Zakharov, Egor and Ho, Long-Nhat and Tran, Anh Tuan and Hu, Liwen and Li, Hao},
+	year = 2024,
+	booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}
+}
+```
 
 ## Contact
 For any questions or issues, please open an issue or contact [tranthephong33@gmail.com](mailto:tranthephong33@gmail.com).
