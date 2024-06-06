@@ -45,8 +45,8 @@ python test_voodoo3d.py --source_root resources/images/sources \
                     --model_path pretrained_models/voodoo3d.pth \
                     --save_root results/voodoo3d_test \
 ```
-### 3D Reconstruction
-If you want to reconsutrct the 3D head only, use the following script:
+### Fine-tuned Lp3D for 3D Reconstruction
+[Lp3D](https://research.nvidia.com/labs/nxp/lp3d/) is the state-of-the-art 3D Portrait Reconstruction model. As mentioned in the VOODOO 3D paper, we had a reimplementation of this model but fine-tuned on in-the-wild data. To evaluate this model, use the following script:
 ```
 python test_lp3d.py --source_root <IMAGE_FOLDERS / IMAGE_PATH> \
                     --config_path configs/lp3d.yml \
