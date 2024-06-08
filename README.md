@@ -17,15 +17,17 @@ First, clone the project:
 ```
 git clone https://github.com/MBZUAI-Metaverse/VOODOO3D-official
 ```
-The implementation only requires standard libraries. You can install all the dependencies using pip:
+The implementation only requires standard libraries. You can install all the dependencies using conda and pip:
 ```
-conda create -n voodoo3d python=3.10  # optional
+conda create -n voodoo3d python=3.10 pytorch=2.3.0 torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+
 pip install -r requirements.txt
 ```
 
-You need to download the BFM model for the pose estimation. You can download it [here](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/the_tran_mbzuai_ac_ae/EasQUk8MESRMtIphdDA7T14BDzj83frLGU3VQoWM6CG6iQ?e=C4vZ0k) and put it into `./additional_modules/deep3dfacerecon`.
-
-Next, prepare the pretrained weights and put them into `./pretrained_models`. You can download them [here](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/the_tran_mbzuai_ac_ae/EUWFHRIXZrxEo2Ak2zKhxfwBzmaLFjnBLmmi-5BoTuPU4w?e=m70Ly5).
+Next, prepare the pretrained weights and put them into `./pretrained_models`:
+- Foreground Extractor: Donwload weights provided by [MODNet](https://github.com/ZHKKKe/MODNet) using [this link](https://drive.google.com/file/d/1mcr7ALciuAsHCpLnrtG_eop5-EYhbCmz/view?usp=drive_link)
+- Pose estimation: Download weights provided by [Deep3DFaceRecon_pytorch](https://github.com/sicxu/Deep3DFaceRecon_pytorch) using [this link](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/the_tran_mbzuai_ac_ae/EXlLGrp1Km1EkhObscL8r18BwI39MEq-4QLHb5MQMN0egw?e=gNfQI9)
+- [Our pretrained weights](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/the_tran_mbzuai_ac_ae/ETxx3EQF6QFPkviUD9ivk6EBmdVrE8_0j8qtIi59ThkBBQ?e=UkSCh2)
 
 ## Inference
 ### 3D Head Reenactment
@@ -65,17 +67,21 @@ python test_lp3d.py --source_root resources/images/sources \
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Our implementation uses modified versions of other projects that has different licenses. Specifically:
+- GPFGAN and MODNet,  is distributed under Apache License version 2.0.
+- EG3D and SegFormer is distributed under NVIDIA Source Code License.
+
+Other code if not stated otherwise is licensed under the MIT License. See the [LICENSES](LICENSES) file for details.
 
 ## Acknowledgements
 This work would not be possible without the following projects:
 
-- [eg3d](https://github.com/NVlabs/eg3d): We borrowed the data preprocessing and the generative model code to synthesize the data during training.
-- [Deep3DFaceRecon_pytorch](https://github.com/sicxu/Deep3DFaceRecon_pytorch): We borrowed this code to predict the camera pose and process the data.
-- [segmentation_models.pytorch](https://github.com/qubvel/segmentation_models.pytorch): We borrowed DeepLabV3 implementation from this project.
-- [MODNet](https://github.com/ZHKKKe/MODNet): We borrowed the foreground extraction code from this project.
-- [SegFormer](https://github.com/NVlabs/SegFormer): We borrowed the transformer blocks from this project.
-- [GFPGAN](https://github.com/TencentARC/GFPGAN): We use GFPGAN as our super-resolution module
+- [eg3d](https://github.com/NVlabs/eg3d): We used portions of the data preprocessing and the generative model code to synthesize the data during training.
+- [Deep3DFaceRecon_pytorch](https://github.com/sicxu/Deep3DFaceRecon_pytorch): We used portions of this code to predict the camera pose and process the data.
+- [segmentation_models.pytorch](https://github.com/qubvel/segmentation_models.pytorch): We used portions of DeepLabV3 implementation from this project.
+- [MODNet](https://github.com/ZHKKKe/MODNet): We used portions of the foreground extraction code from this project.
+- [SegFormer](https://github.com/NVlabs/SegFormer): We used portions of the transformer blocks from this project.
+- [GFPGAN](https://github.com/TencentARC/GFPGAN): We used portions of GFPGAN as our super-resolution module
 
 If you see your code used in this implementation but haven't properly acknowledged, please contact me via [tranthephong33@gmail.com](tranthephong33@gmail.com).
 
