@@ -1,0 +1,10 @@
+-f https://download.pytorch.org/whl/torch_stable.html
+torch==2.3.0+cu121
+torchvision==0.18.0+cu121
+opencv-python==4.10.0.82
+kornia==0.7.2
+click==8.1.7
+tqdm==4.66.4
+pyyaml==6.0.1
+face_alignment==1.4.1
+timm==1.0.3

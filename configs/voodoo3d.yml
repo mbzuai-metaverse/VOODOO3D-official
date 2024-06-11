@@ -1,0 +1,34 @@
+model:
+  model_class: Voodoo3D
+  params:
+    triplane_nd: 32 
+    triplane_h: 256 
+    triplane_w: 256  
+    neural_rendering_resolution: 128
+    use_aug: False
+
+    rendering_kwargs:
+      decoder_lr_mul: 1.0
+      depth_resolution: 96
+      depth_resolution_importance: 96
+      camera_radius: &camera_radius 2.7
+      lookat_point: &lookat_point [0.0, 0.0, 0.2]
+      ray_start: 2.25
+      ray_end: 3.3
+      box_warp: 1
+      disparity_space_sampling: False
+      clamp_mode: 'softplus'
+
+    superresolution_kwargs:
+      model_class: GFPGANv1Clean
+      params:
+        out_size: 512
+        num_style_feat: 512
+        channel_multiplier: 2
+        decoder_load_path: ~
+        fix_decoder: False
+        num_mlp: 8
+        input_is_latent: True
+        different_w: True
+        narrow: 1
+        sft_half: True
